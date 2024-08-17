@@ -1,0 +1,10 @@
+.input {
+  background-color: #ffa500;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+.input:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,72 @@
+nav {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
+.leftSide {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.inputField {
+  height: 50px;
+  display: flex;
+  width: 25%;
+  border-radius: 10px
+}
+
+input {
+  border: none;
+  width: 85%;
+  height: 100%;
+  font-weight: bold;
+  padding-left: 10px;
+  font-size: 16px;
+
+}
+
+.search:hover {
+  cursor: pointer;
+}
+
+.search {
+  color: white;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  background-color: #ffffff;
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+
+input::placeholder {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.icon {
+  font-weight: bold;
+  width: 30px;
+  height: 20px;
+}

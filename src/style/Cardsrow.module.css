@@ -1,0 +1,35 @@
+.containerCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsRow,
+.cardsHeader {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.cardsRow > div {
+  text-align: center;
+  width: 22.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsHeader > p {
+  color: var(--primary-color);
+  font-size: 20px;
+  width: 22.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img,
+p,
+.cardsHeader > p {
+  margin: 30px 0;
+}

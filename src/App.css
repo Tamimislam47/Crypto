@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary-color: #ffa500;
+  overflow-x: hidden;
+}
+.App {
+  overflow-x: hidden;
+  color: white;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #272a34;
+}
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
