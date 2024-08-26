@@ -11,23 +11,25 @@ export default function Coinscards(props) {
   } = props;
 
   return (
-    <div className={style.cardsRow}>
-      <div>
-        <img src={image} alt={name} />
-      </div>
-      <div>
-        <p>{name}</p>
-      </div>
-      <div>
-        <p>
-          {currencySymbol} {price.toFixed(2)}
-        </p>
-      </div>
-      <div>
-        <span style={{ color: percentage > 0 ? "green" : "red" }}>
-          {percentage > 0 ? "+" : ""}
-          {percentage.toFixed(2)}%
-        </span>
+    <div className={style.parentCardsrow}>
+      <div key={props.id} className={style.coinsCardsRow}>
+        <div className={style.cardsRowDiv}>
+          <img className={style.coinsImg} src={image} alt={name} />
+        </div>
+        <div className={style.cardsRowDiv}>
+          <p>{name}</p>
+        </div>
+        <div className={style.cardsRowDiv}>
+          <p>
+            {currencySymbol}{price.toFixed(2)}
+          </p>
+        </div>
+        <div className={style.cardsRowDiv}>
+          <span style={{ color: percentage > 0 ? "green" : "red" }}>
+            {percentage > 0 ? "+" : ""}
+            {percentage.toFixed(2)}%
+          </span>
+        </div>
       </div>
     </div>
   );

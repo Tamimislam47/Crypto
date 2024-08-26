@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import style from "../style/Cardsrow.module.css";
 import Cardsrow from "./Cardsrow";
 import CardsHeader from "./CardsHeader";
+import OurModel from "./OurModel";
 
 const BASEURL = "https://api.coingecko.com/api/v3/exchanges";
 
@@ -22,6 +23,7 @@ export default function Cards() {
       const data = await response.json();
       setexchanges(data);
       setloading(false);
+      
     }
     fetching();
   }, []);
@@ -32,12 +34,11 @@ export default function Cards() {
         <Loading />
       ) : (
         <>
+          <OurModel />
           <Navbar onHanlderInput={onHanlderInput} />
           <CardsHeader />
           {exchanges
-            .filter((data) =>
-              data.name.toLowerCase().includes(searchVal)
-            )
+            .filter((data) => data.name.toLowerCase().includes(searchVal))
             .map((data, id) => (
               <div key={id} className={style.containerCards}>
                 <Cardsrow {...data} />
@@ -48,4 +49,3 @@ export default function Cards() {
     </>
   );
 }
-

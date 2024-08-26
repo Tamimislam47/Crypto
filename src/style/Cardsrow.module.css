@@ -2,34 +2,78 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.parentCardsrow {
+  width: 80%;
+}
+.cardsRow,
+.coinsCardsRow {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.cardsRowHeader {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  color: var(--primary-color);
 }
 
-.cardsRow,
-.cardsHeader {
-  display: flex;
-  width: 90%;
-  justify-content: space-around;
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.coinsImg {
+  width: 70px;
+  height: 70px;
+}
+
+span {
+  font-size: 16px;
+}
+
+.cardsRowHeader > p {
+  margin-bottom: 20px;
 }
 
 .cardsRow > div {
-  text-align: center;
-  width: 22.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
-.cardsHeader > p {
-  color: var(--primary-color);
-  font-size: 20px;
-  width: 22.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@media (max-width: 768px) {
+  .cardsRowHeader > p {
+    font-size: 18px;
+  }
 
-img,
-p,
-.cardsHeader > p {
-  margin: 30px 0;
+  .cardsRowDiv {
+    margin-bottom: 10px;
+  }
+
+  .cardsRowDiv > p {
+    font-size: 16px;
+  }
+  .cardsRowDiv > img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .coinsImg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .cardsRow,
+  .cardsRowHeader {
+    gap: 50px;
+  }
+
+  .coinsCardsRow {
+    gap: 20px;
+  }
 }

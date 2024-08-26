@@ -1,10 +1,17 @@
+.buttonCointainer {
+  width: 100vw;
+  height: 50px;
+  background-color: red;
+}
 .input {
   background-color: #ffa500;
   color: white;
-  padding: 15px;
+  padding: 12px;
   border-radius: 15px;
-  margin-left: 10px;
 }
 .input:hover {
   cursor: pointer;
+}
+button {
+  width: 80px;
 }

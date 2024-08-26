@@ -1,15 +1,18 @@
 import React from "react";
 import style from "../style/Cardsrow.module.css";
 
-export default function CardsHeader({ percentage,currency }) {
-  
+export default function CardsHeader({ percentage, currency }) {
   return (
     <div className={style.containerCards}>
-      <div className={style.cardsHeader}>
-        <p>Logo</p>
-        <p>Exchange</p>
-        <p>Price ({currency}) </p>
-        <p>{percentage ? "percentage" : "Rank"}</p>
+      <div className={style.parentCardsrow}>
+        <div className={style.cardsRowHeader}>
+          <p>Logo</p>
+          <p>Exchange</p>
+          <p>Price {currency ? `(${currency})` : ""} </p>
+          <p style={{ paddingRight: percentage ? "15px" : "0px" }}>
+            {percentage ? "profit" : "Rank"}
+          </p>
+        </div>
       </div>
     </div>
   );
